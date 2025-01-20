@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Montserrat:wght@400;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+ 
+}
+
+h1 {
+  font-family: "Mochiy Pop One", cursive;
+}
+

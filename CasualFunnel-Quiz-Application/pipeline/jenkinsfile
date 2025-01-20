@@ -1,0 +1,29 @@
+
+node {
+  stage('preperation'){
+    echo 'cloning repo'
+    git url:'https://github.com/himanshugoyal77/casualFunnel-Quiz.git',branch:'main'
+  }
+  
+
+  stage('test'){
+    echo 'running test cases'
+     nodejs(nodeJSInstallationName: 'node-16') {
+      sh 'npm i -D'
+      sh 'npm run test'
+    }
+  }
+  stage('build'){
+    echo 'building image'
+    sh 'docker build -t himanshug77/quizly:${BUILD_NUMBER} .'
+  }
+  stage('deploy to docker hub'){
+    withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', usernameVariable: 'username', passwordVariable: 'pass')]) {
+       sh 'docker login -u ${username} -p ${pass}'
+       sh 'docker image push himanshug77/quizly:${BUILD_NUMBER}'
+   }
+  }
+   stage('cleanup'){
+    sh 'docker logout'
+  }
+}
