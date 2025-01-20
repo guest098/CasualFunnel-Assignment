@@ -1,6 +1,9 @@
 # CasualFunnel-Assignment
 Deployed Website URL
+
 https://casualfuneel-assignment-shanmuk.netlify.app/
+
+
 Overview
 This is a quiz application with comprehensive features. Users need to enter their name and email address to start. Once the quiz begins, a 30-minute timer starts counting down. Users have to solve 15 questions within this time frame. If the timer ends, the quiz is automatically submitted. After finishing the quiz, users are redirected to a dashboard page where their overall score is displayed. They can review the correct answers and see which questions were answered incorrectly. Based on the result, a suggestion is provided to the user for improvement.
 Approach
