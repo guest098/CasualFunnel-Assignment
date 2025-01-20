@@ -7,8 +7,13 @@ Approach
 The website is built with React.js and Tailwind CSS. For state management, useContext API is used. Ant Design (Antd) components are utilized for modals and drawers. For animations, Lottie animations enhance the user experience.
 The website is fully mobile responsive. Detailed explanations and comments are included in the code to aid understanding.
 Setup and Installation
+
 Install dependencies:
+
 npm install
+
 Run the development server:
+
 npm run dev
+
 The website will be live at http://127.0.0.1:5173/.
